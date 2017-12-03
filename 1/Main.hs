@@ -21,5 +21,9 @@ main = do
         zipped = zip digits (rotate 1 digits)
         digsum = sum . map takeFirst . filter areTwins $ zipped
 
+        zipped2 = zip digits (rotate (length digits `div` 2) digits)
+        digsum2 = sum . map takeFirst . filter areTwins $ zipped2
+
     print digsum
+    print digsum2
     hClose handle
